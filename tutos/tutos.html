@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Victor</title>
+    <meta name="description" content="Portfolio de Victor, analista de datos y estudiante de programación">
+    <!--open graph-->
+    <meta property="og:title" content="Portfolio de Victor">
+    <meta property="og:description" content="Analista de datos y estudiante de programación">
+    <meta property="og:image" content="img/Solid_black.png">
+    <meta property="og:image:alt" content="Un cuadro negro">
+
+    <link rel="alternate" href="https://fishellvvv.en" hreflang="en-GB">
+    <link rel="canonical" href="https://fishellvvv.com">
+
+    <meta name="robots" content="index. follow">
+    <meta name="theme-color" content="#1a1a1a">
+
+    <link rel="icon" type="img/ico" href="img/favicon.ico">
+
+    <style>
+        h1 {
+            color: rgb(0 0 0 / 80%);
+            font-family: monospace;
+        }
+
+        body {
+            background: #bbb;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .link {
+            color: red;
+        }
+        .link:hover {
+            color: #09f;
+            outline: 5px solid #09f;
+        }
+        .link:active {
+            outline: 5px solid green;
+        }
+
+        #show {
+            background: #09f;
+            color: #fff;
+            border: 0;
+        }
+
+        li:first-child {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a download href="img/Solid_black.png">
+            <img
+                id="portrait-image"
+                src="img/Solid_black.png"
+                alt="Un cuadro negro"
+                title="Cuadro negro"
+                width="100">
+        </a>
+        <h1>Portfolio de Victor</h1>
+        <p>Analista de datos y estudiante de <strong>programación</strong></p>
+
+        <nav>
+            <a class="link" href="#experiencia">Experiencia</a>
+            <a class="link" href="#proyectos">Proyectos</a>
+            <a class="link" href="#faq">Preguntas frecuentes</a>
+            <a class="link" href="#contacto">Formulario de Contacto</a>
+            <a
+                class="link"
+                href="https://github.com/fishellVvv"
+                target="_blank"
+                rel="noreferrer"
+            >Github</a>
+        </nav>
+    </header>
+
+    <dialog id="dialog">
+        <h3>¿Sabías que puedes abrir un modal así?</h3>
+        <p>¡Y es totalmente nativo!</p>
+
+        <audio controls src="https://download.samplelib.com/mp3/sample-15s.mp3"></audio>
+
+        <video controls muted width="300" src="https://filesamples.com/samples/video/mp4/sample_960x400_ocean_with_audio.mp4"></video>
+
+        <iframe style="width: 75%; aspect-ratio: 16/9;" src="https://midu.dev" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <button id="hide">Cerrar modal</button>
+    </dialog>
+    <button id="show">Abrir modal</button>
+    <script>
+        window.show.addEventListener('click', () => {
+            window.dialog.showModal()
+        })
+        window.hide.addEventListener('click', () => {
+            window.dialog.close()
+        })
+    </script>
+
+    <main>
+        <h2 id="experiencia">Experiencia</h2>
+        <ul>
+            <li>experiencia 2</li>
+            <li>experiencia 3</li>
+            <li>experiencia 1</li>
+        </ul>
+        
+        <h2 id="proyectos">Proyectos realizados</h2>
+        <aside>
+            <header>
+                <h3>Mis tecnologías <span>favoritas</span></h3>
+            </header>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Java</li>
+            </ul>
+        </aside>
+        <section>
+            <article>
+                <header>
+                    <h4>Sitio Web Corporativo</h4>
+                </header>
+                <p>Desarrollo de un sitio web corporativo con una interfaz amigable y moderna.</p>
+                <footer>
+                    <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h4>Sitio Web Corporativo</h4>
+                </header>
+                <p>Desarrollo de un sitio web corporativo con una interfaz amigable y moderna.</p>
+                <footer>
+                    <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h4>Sitio Web Corporativo</h4>
+                </header>
+                <p>Desarrollo de un sitio web corporativo con una interfaz amigable y moderna.</p>
+                <footer>
+                    <small>Tecnologías utilizadas: HTML, CSS, JavaScript</small>
+                </footer>
+            </article>
+        </section>
+
+        <section>
+            <h2 id="faq">Preguntas fracuentes</h2>
+            <details open>
+                <summary>¿Que estudios tienes?</summary>
+                <p>Estudio el FP de Desarrollo de aplicaciones Web</p>
+            </details>
+            <details>
+                <summary>¿Cuales son tus hobbies?</summary>
+                <p>Soy un gran aficionado de las motos clásicas (scrambler, cafe-racer, etc...) y me considero un autentico freaky de los videojuegos, el coleccionismo, el rol... demasiados hobbies.</p>
+            </details>
+            <details>
+                <summary>¿Cual es tu lenguaje favorito?</summary>
+                <p>Me encanta Python, es un lenguaje muy versatil y con el que se pueden hacer muchas cosas.</p>
+            </details>
+        </section>
+
+        <section>
+            <h2 id="contacto">Formulario de contacto</h2>
+            <form method="post" action="/">
+                <fieldset>
+                    <legend>Información personal</legend>
+                    <label>Nombre:
+                        <input type="text" name="name" placeholder="tu nombre">
+                    </label>
+                    <label>Email:
+                        <input type="email" name="email" placeholder="tuemail@dominio.com">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Información adicional</legend>
+                    <label>Teléfono: *
+                        <input type="tel" name="phone" placeholder="tu teléfono" required pattern="[0-9]{9}">
+                    </label>
+                    <label>Fecha:
+                        <input type="datetime-local" name="fecha">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Otros</legend>
+                    <div>
+                        <label for="why">¿Por que quieres contactar?</label>
+                        <select name="why" id="why">
+                            <option value="1">Trabajo</option>
+                            <option value="2">Duda</option>
+                            <option value="3">Más información</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="terms">¿Aceptas los términos?</label>
+                        <input type="checkbox" id="terms" name="terms" required>
+                    </div>
+                    <div>
+                        <datalist id="languages">
+                            <option value="Python"></option>
+                            <option value="Java"></option>
+                            <option value="C#"></option>
+                            <option value="JavaScript"></option>
+                        </datalist>
+                        <label for="">
+                            ¿Con que idioma quieres que te ayude?
+                            <input list="languages" name="languages">
+                        </label>
+                    </div>
+                </fieldset>
+                <input type="submit" value="Enviar contacto">
+                <button>Otro enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        contenido del footer
+
+        <a href="mailto:victorvigilvela@gmail.com">Envíame un correo</a>
+        <a href="tel:+34658394443">Llamar por teléfono</a>
+        <a href="whatsapp://send?text=Hola Victor">Envíame un Whatsapp</a>
+
+    </footer>
+</body>
+
+</html>

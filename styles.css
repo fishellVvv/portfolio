@@ -1,0 +1,266 @@
+/* RESET BÁSICO */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* DESACTIVAR DECORACIONES Y HERENCIAS INNECESARIAS */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ul,
+ol,
+li,
+a,
+img {
+  box-sizing: inherit;
+}
+
+/* LISTAS Y ENLACES */
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* VARIABLES GLOBALES */
+:root {
+  --color-text: #111;
+  --color-text-muted: #666;
+  --color-bg: #f4f4f4;
+  --color-bg-alt: #ddd;
+  --color-border: #bbb;
+  --color-accent: #c42;
+  --color-accent-hover: #ed6e4f;
+  --color-error: #e53737;
+  --color-success: #33cc99;
+}
+
+/* TEMA DARK */
+[data-theme="dark"] {
+  --color-text: #e0e0e0;
+  --color-text-muted: #999;
+  --color-bg: #222;
+  --color-bg-alt: #2c2c2c;
+  --color-border: #444;
+  --color-accent: #c42;
+  --color-accent-hover: #ed6e4f;
+  --color-error: #e53737;
+  --color-success: #33cc99;
+}
+
+/* HTML */
+html {
+  height: 100%;
+}
+
+/* BODY */
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  box-sizing: border-box;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-bg-alt);
+  color: var(--color-text);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--color-accent);
+}
+
+/* NAV */
+nav ul {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav li + li {
+  padding-left: 1rem;
+  border-left: 0.125rem solid var(--color-text-muted);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-text-muted);
+  font-weight: 200;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--color-text);
+}
+
+/* MAIN */
+main {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 4rem;
+  font-weight: 100;
+}
+
+/* ASIDE */
+.profile {
+  flex: 0 0 256px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  align-items: center;
+}
+
+.profile img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile .me {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile .me .name {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.profile .me .name h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.profile .me .name span {
+  color: var(--color-text-muted);
+  font-size: 1.25rem;
+}
+
+.profile .me .subtitle {
+  color: var(--color-accent);
+  font-size: 1.25rem;
+  font-weight: 200;
+}
+
+.profile .me .desc {
+  color: var(--color-text-muted);
+  font-size: 1.25rem;
+}
+
+.profile .meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-text);
+}
+
+.profile .meta li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile .links {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  border-top: 0.125rem solid var(--color-text-muted);
+  padding-bottom: 1.5rem;
+  border-bottom: 0.125rem solid var(--color-text-muted);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile .links button {
+  margin: 0;
+}
+
+.profile .techs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTENT */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 100%;
+}
+
+/* FOOTER */
+.site-footer {
+  margin-top: 4rem;
+  padding: 1rem 1rem;
+  font-size: 0.625rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  background-color: var(--color-bg-alt);
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: stretch;
+  }
+
+  .profile {
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+}

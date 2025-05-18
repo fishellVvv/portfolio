@@ -37,7 +37,7 @@
   font-family: "Material Symbols Outlined";
   font-weight: normal;
   font-style: normal;
-  font-size: 1.25rem; /* o el tamaño que quieras */
+  font-size: 1.25rem;
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -46,6 +46,7 @@
   direction: ltr;
 
   /* Accesibilidad */
+  font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
 }
@@ -86,6 +87,15 @@ body {
   font-weight: 500;
   color: var(--color-accent);
   text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 nav ul {
@@ -133,6 +143,8 @@ main {
 /* Lateral */
 .profile {
   width: 256px;
+  min-width: 256px;
+  max-width: 256px;
   padding: 1rem 0;
   gap: 1.5rem;
   align-items: flex-start;
@@ -234,18 +246,36 @@ main {
 }
 
 .profile .techs {
+  margin: 0.5rem;
   gap: 1rem;
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-items: center;
+
+  color: var(--color-text-muted);
+}
+
+.profile .techs img {
+  width: 3rem;
+  height: 3rem;
+
+  color: var(--color-text-muted);
 }
 
 /* Contenido principal */
 .content {
-  width: 100%;
-  gap: 4rem;
+  min-width: 0;
+  gap: 2rem;
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content > section {
+  padding: 1rem 0;
+  gap: 2rem;
 
   display: flex;
   flex-direction: column;
@@ -268,17 +298,34 @@ main {
   max-width: 508px;
 }
 
-/* Condicionales */
+/* Media query */
 @media (max-width: 768px) {
-  main {
-    gap: 3rem;
-    align-items: stretch;
-
-    flex-direction: column;
+  .menu-toggle {
+    display: block;
   }
 
-  .profile {
-    width: 100%;
+  .nav-list {
+    display: none;
+  }
+
+  .nav-list.open {
+    display: block;
+  }
+
+  .nav-list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  main {
+    gap: 3rem;
+    align-items: center;
+
+    flex-direction: column;
   }
 
   .content {

@@ -309,11 +309,68 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-items: center;
+
+  color: var(--color-text-muted);
 }
 
 .profile .techs img {
   width: 3rem;
   height: 3rem;
+}
+
+.profile .techs span {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  background-color: currentColor;
+}
+
+.techs .html5 {
+  -webkit-mask: url("../assets/icons/html5.svg") no-repeat center;
+  -webkit-mask-size: contain;
+
+  mask: url("../assets/icons/html5.svg") no-repeat center;
+  mask-size: contain;
+}
+
+.techs .css3 {
+  -webkit-mask: url("../assets/icons/css3.svg") no-repeat center;
+  -webkit-mask-size: contain;
+
+  mask: url("../assets/icons/css3.svg") no-repeat center;
+  mask-size: contain;
+}
+
+.techs .javascript {
+  -webkit-mask: url("../assets/icons/javascript.svg") no-repeat center;
+  -webkit-mask-size: contain;
+
+  mask: url("../assets/icons/javascript.svg") no-repeat center;
+  mask-size: contain;
+}
+
+.techs .db {
+  -webkit-mask: url("../assets/icons/db.svg") no-repeat center;
+  -webkit-mask-size: contain;
+
+  mask: url("../assets/icons/db.svg") no-repeat center;
+  mask-size: contain;
+}
+
+.techs .python {
+  -webkit-mask: url("../assets/icons/python.svg") no-repeat center;
+  -webkit-mask-size: contain;
+
+  mask: url("../assets/icons/python.svg") no-repeat center;
+  mask-size: contain;
+}
+
+.techs .java {
+  -webkit-mask: url("../assets/icons/java.svg") no-repeat center;
+  -webkit-mask-size: contain;
+
+  mask: url("../assets/icons/java.svg") no-repeat center;
+  mask-size: contain;
 }
 
 /* Contenido principal */

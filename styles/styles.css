@@ -279,29 +279,26 @@ main {
   background-color: var(--color-accent);
 }
 
-.button-link .github-mask {
+.button-link span {
   display: inline-block;
   width: 1.25rem;
   height: 1.25rem;
   background-color: currentColor;
+}
 
-  -webkit-mask: url("../assets/icons/github-mask.svg") no-repeat center;
+.button-link .github {
+  -webkit-mask: url("../assets/icons/github.svg") no-repeat center;
   -webkit-mask-size: contain;
 
-  mask: url("../assets/icons/github-mask.svg") no-repeat center;
+  mask: url("../assets/icons/github.svg") no-repeat center;
   mask-size: contain;
 }
 
-.button-link .linkedin-mask {
-  display: inline-block;
-  width: 1.25rem;
-  height: 1.25rem;
-  background-color: currentColor;
-
-  -webkit-mask: url("../assets/icons/linkedin-mask.svg") no-repeat center;
+.button-link .linkedin {
+  -webkit-mask: url("../assets/icons/linkedin.svg") no-repeat center;
   -webkit-mask-size: contain;
 
-  mask: url("../assets/icons/linkedin-mask.svg") no-repeat center;
+  mask: url("../assets/icons/linkedin.svg") no-repeat center;
   mask-size: contain;
 }
 

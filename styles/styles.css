@@ -254,7 +254,7 @@ main {
   justify-content: center;
 }
 
-.profile .links button {
+.profile .links .button-link {
   margin: auto;
   padding: 0.25rem 0.75rem;
   border: none;
@@ -268,11 +268,12 @@ main {
   color: var(--color-bg-alt);
   background-color: var(--color-text);
   cursor: pointer;
+  text-decoration: none;
 
   transition: background-color 0.2s ease;
 }
 
-.profile .links button:hover {
+.profile .links .button-link:hover {
   color: #e0e0e0;
   background-color: var(--color-accent);
 }

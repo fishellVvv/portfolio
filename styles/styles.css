@@ -289,7 +289,6 @@ main {
 .button-link .github {
   -webkit-mask: url("../assets/icons/github.svg") no-repeat center;
   -webkit-mask-size: contain;
-
   mask: url("../assets/icons/github.svg") no-repeat center;
   mask-size: contain;
 }
@@ -297,7 +296,6 @@ main {
 .button-link .linkedin {
   -webkit-mask: url("../assets/icons/linkedin.svg") no-repeat center;
   -webkit-mask-size: contain;
-
   mask: url("../assets/icons/linkedin.svg") no-repeat center;
   mask-size: contain;
 }
@@ -328,7 +326,6 @@ main {
 .techs .html5 {
   -webkit-mask: url("../assets/icons/html5.svg") no-repeat center;
   -webkit-mask-size: contain;
-
   mask: url("../assets/icons/html5.svg") no-repeat center;
   mask-size: contain;
 }
@@ -336,7 +333,6 @@ main {
 .techs .css3 {
   -webkit-mask: url("../assets/icons/css3.svg") no-repeat center;
   -webkit-mask-size: contain;
-
   mask: url("../assets/icons/css3.svg") no-repeat center;
   mask-size: contain;
 }
@@ -344,7 +340,6 @@ main {
 .techs .javascript {
   -webkit-mask: url("../assets/icons/javascript.svg") no-repeat center;
   -webkit-mask-size: contain;
-
   mask: url("../assets/icons/javascript.svg") no-repeat center;
   mask-size: contain;
 }
@@ -352,7 +347,6 @@ main {
 .techs .db {
   -webkit-mask: url("../assets/icons/db.svg") no-repeat center;
   -webkit-mask-size: contain;
-
   mask: url("../assets/icons/db.svg") no-repeat center;
   mask-size: contain;
 }
@@ -360,7 +354,6 @@ main {
 .techs .python {
   -webkit-mask: url("../assets/icons/python.svg") no-repeat center;
   -webkit-mask-size: contain;
-
   mask: url("../assets/icons/python.svg") no-repeat center;
   mask-size: contain;
 }
@@ -368,7 +361,6 @@ main {
 .techs .java {
   -webkit-mask: url("../assets/icons/java.svg") no-repeat center;
   -webkit-mask-size: contain;
-
   mask: url("../assets/icons/java.svg") no-repeat center;
   mask-size: contain;
 }

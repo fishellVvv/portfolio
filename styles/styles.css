@@ -87,6 +87,7 @@ body {
 }
 
 .site-header .logo {
+  font-family: "NotoSansDisplay", system-ui, sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--color-accent);
@@ -441,6 +442,18 @@ main {
   font-size: 0.625rem;
   text-align: center;
   max-width: 508px;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NotoSansDisplay";
+  src: url("../assets/fonts/NotoSansDisplay/NotoSansDisplay-Regular.ttf")
+    format("truetype");
 }
 
 /* Media query */

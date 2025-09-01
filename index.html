@@ -11,18 +11,24 @@
     />
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <!-- Logo y navegación principal (top) -->
     <header class="site-header">
-      <a href="/" class="logo" aria-label="Volver al inicio"> ⱽ/: </a>
+      <a href="./" class="logo" aria-label="Volver al inicio"> ⱽ/: </a>
 
       <div class="header-controls">
-        <nav class="nav-list">
+        <button
+          id="menu-toggle"
+          class="nav-toggle"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          ☰
+        </button>
+
+        <nav id="main-nav" class="nav" hidden>
           <ul>
             <li><a href="#about">Acerca de mí</a></li>
             <li><a href="#skills">Habilidades Blandas</a></li>
@@ -31,10 +37,6 @@
             <li><a href="#projects">Proyectos</a></li>
           </ul>
         </nav>
-
-        <button class="menu-toggle" aria-label="Abrir menú">
-          <span class="material-symbols-outlined">menu</span>
-        </button>
 
         <button class="theme-toggle" aria-label="Cambiar tema">
           <span class="material-symbols-outlined" id="theme-icon"
@@ -79,7 +81,12 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="github"></span>
+            <img
+              class="icon"
+              src="assets/icons/github.svg"
+              alt=""
+              aria-hidden="true"
+            />
             GitHub
           </a>
           <a
@@ -89,16 +96,30 @@
             rel="noopener noreferrer"
           >
             Linked
-            <span class="linkedin"></span>
+            <img
+              class="icon"
+              src="assets/icons/linkedin.svg"
+              alt=""
+              aria-hidden="true"
+            />
           </a>
         </div>
+
         <div class="techs">
-          <span class="html5"></span>
-          <span class="css3"></span>
-          <span class="javascript"></span>
-          <span class="db"></span>
-          <span class="python"></span>
-          <span class="java"></span>
+          <img class="tech-icon" src="assets/icons/html5.svg" alt="HTML5" />
+          <img class="tech-icon" src="assets/icons/css3.svg" alt="CSS3" />
+          <img
+            class="tech-icon"
+            src="assets/icons/javascript.svg"
+            alt="JavaScript"
+          />
+          <img
+            class="tech-icon"
+            src="assets/icons/db.svg"
+            alt="Bases de datos"
+          />
+          <img class="tech-icon" src="assets/icons/python.svg" alt="Python" />
+          <img class="tech-icon" src="assets/icons/java.svg" alt="Java" />
         </div>
       </aside>
 
@@ -144,23 +165,240 @@
               <p>organización</p>
             </li>
             <li>
-              <span class="material-symbols-outlined">Pace</span>
+              <span class="material-symbols-outlined">hourglass_empty</span>
               <p>paciencia</p>
             </li>
           </ul>
         </section>
 
-        <section id="experience">
+        <section id="experience" class="section">
           <h2>Experiencia</h2>
-          <!-- Lista de trabajos -->
+
+          <div class="tl-group">
+            <div class="tl-year">2025</div>
+            <ol class="tl-list">
+              <li class="tl-item">
+                <h3 class="tl-title">
+                  Desarrollador Front-end (proyecto académico)
+                </h3>
+                <p class="tl-meta">
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >location_on</span
+                  >
+                  <span class="sr-only">Localización: </span>Remoto · Linares
+                  (Jaén)
+                </p>
+                <p class="tl-desc">
+                  Maquetación responsive a partir de Figma, menú móvil
+                  accesible, banner de cookies y estructura semántica básica.
+                </p>
+              </li>
+              <li class="tl-item">
+                <h3 class="tl-title">Maquetador web (proyecto académico)</h3>
+                <p class="tl-meta">
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >location_on</span
+                  >
+                  <span class="sr-only">Localización: </span>Remoto
+                </p>
+                <p class="tl-desc">
+                  Creación de una sección “About + Skills” reutilizable, ajuste
+                  tipográfico y verificación de contraste en modo oscuro.
+                </p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="tl-group">
+            <div class="tl-year">2024</div>
+            <ol class="tl-list">
+              <li class="tl-item">
+                <h3 class="tl-title">
+                  Colaborador en web del aula (proyecto académico)
+                </h3>
+                <p class="tl-meta">
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >location_on</span
+                  >
+                  <span class="sr-only">Localización: </span>Centro educativo
+                </p>
+                <p class="tl-desc">
+                  Página informativa con secciones ancladas, pruebas en
+                  distintos tamaños de pantalla y optimización de imágenes.
+                </p>
+              </li>
+              <li class="tl-item">
+                <h3 class="tl-title">
+                  Soporte de contenidos (proyecto académico)
+                </h3>
+                <p class="tl-meta">
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >location_on</span
+                  >
+                  <span class="sr-only">Localización: </span>Remoto
+                </p>
+                <p class="tl-desc">
+                  Actualización de textos e iconografía SVG, pequeñas
+                  correcciones de estilos y revisión de enlaces internos.
+                </p>
+              </li>
+            </ol>
+          </div>
         </section>
 
-        <section id="education">
+        <section id="education" class="section">
           <h2>Formación</h2>
+
+          <div class="tl-group">
+            <div class="tl-year">2025</div>
+            <ol class="tl-list">
+              <li class="tl-item">
+                <h3 class="tl-title">Máster en Data & Analytics</h3>
+                <p class="tl-meta">
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >location_on</span
+                  >
+                  <span class="sr-only">Centro: </span>
+                  <strong class="tl-org">Prometeo FP – The Power</strong>
+                </p>
+                <p class="tl-desc">
+                  Fundamentos de análisis de datos, visualización y buenas
+                  prácticas para comunicar resultados de forma clara.
+                </p>
+              </li>
+
+              <li class="tl-item">
+                <h3 class="tl-title">
+                  Técnico Superior de Desarrollo de Aplicaciones Web
+                </h3>
+                <p class="tl-meta">
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >location_on</span
+                  >
+                  <span class="sr-only">Centro: </span>
+                  <strong class="tl-org">Prometeo FP – The Power</strong>
+                </p>
+                <p class="tl-desc">
+                  HTML, CSS y JavaScript, control de versiones con Git y
+                  nociones de accesibilidad y rendimiento web.
+                </p>
+              </li>
+            </ol>
+          </div>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="section">
           <h2>Proyectos</h2>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <img
+                class="project-cover"
+                src="assets/images/proyecto-1.png"
+                alt="Captura del proyecto Portfolio"
+              />
+              <div class="project-body">
+                <div class="project-row">
+                  <h3 class="project-title">Portfolio</h3>
+                  <div class="project-badges" aria-label="Tecnologías usadas">
+                    <img
+                      class="badge-icon"
+                      src="assets/icons/html5.svg"
+                      alt="HTML5"
+                    />
+                    <img
+                      class="badge-icon"
+                      src="assets/icons/css3.svg"
+                      alt="CSS3"
+                    />
+                  </div>
+                </div>
+                <div class="project-sep"></div>
+                <p class="project-desc">Menudo meta-contenido, eh?</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                class="project-cover"
+                src="assets/images/proyecto-2.png"
+                alt="Captura del proyecto X"
+              />
+              <div class="project-body">
+                <div class="project-row">
+                  <h3 class="project-title">Churrería Merche</h3>
+                  <div class="project-badges">
+                    <img
+                      class="badge-icon"
+                      src="assets/icons/html5.svg"
+                      alt="HTML5"
+                    />
+                    <img
+                      class="badge-icon"
+                      src="assets/icons/css3.svg"
+                      alt="CSS3"
+                    />
+                  </div>
+                </div>
+                <div class="project-sep"></div>
+                <p class="project-desc">Web de la churrería Merche.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                class="project-cover"
+                src="assets/images/proyecto-3.png"
+                alt="Captura del proyecto Y"
+              />
+              <div class="project-body">
+                <div class="project-row">
+                  <h3 class="project-title">Ferramenta Web</h3>
+                  <div class="project-badges">
+                    <img
+                      class="badge-icon"
+                      src="assets/icons/html5.svg"
+                      alt="HTML5"
+                    />
+                    <img
+                      class="badge-icon"
+                      src="assets/icons/css3.svg"
+                      alt="CSS3"
+                    />
+                  </div>
+                </div>
+                <div class="project-sep"></div>
+                <p class="project-desc">Tu ferretería web de confianza.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                class="project-cover"
+                src="assets/images/proyecto-4.png"
+                alt="Captura del proyecto Z"
+              />
+              <div class="project-body">
+                <div class="project-row">
+                  <h3 class="project-title">Sólo Arquitectura</h3>
+                  <div class="project-badges">
+                    <img
+                      class="badge-icon"
+                      src="assets/icons/html5.svg"
+                      alt="HTML5"
+                    />
+                    <img
+                      class="badge-icon"
+                      src="assets/icons/css3.svg"
+                      alt="CSS3"
+                    />
+                  </div>
+                </div>
+                <div class="project-sep"></div>
+                <p class="project-desc">Apasionante foro de arquitectura.</p>
+              </div>
+            </article>
+          </div>
         </section>
       </section>
     </main>
@@ -174,6 +412,26 @@
       </p>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <div
+      id="cookie-banner"
+      class="cookie-banner"
+      role="region"
+      aria-label="Aviso de cookies"
+      hidden
+    >
+      <p>
+        Uso cookies técnicas y, opcionalmente, analíticas anónimas para mejorar
+        la web. Puedes aceptar o rechazar. Más info en la
+        <a href="privacidad.html#cookies">Política de privacidad</a>.
+      </p>
+      <div class="cookie-actions">
+        <button id="cookie-accept" class="btn">Aceptar</button>
+        <button id="cookie-reject" class="btn btn--ghost">Rechazar</button>
+      </div>
+    </div>
+
+    <script src="scripts/cookies.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/script.js" defer></script>
   </body>
 </html>
